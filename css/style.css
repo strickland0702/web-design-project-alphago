@@ -1,0 +1,173 @@
+body {
+    color: #123693;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-image: url(../images/go_board.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #ffdb13;
+    font-size: 48px;
+    padding: 100px 0;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #14234b;
+}
+
+h2 {
+    color: #0053d6;
+    font-size: 28px;
+    padding: 20px 0;
+    font-family: sans-serif;
+    line-height: normal;
+}
+
+.abstract{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+p {
+    padding: 20px 0;
+    /* font-family: "Raleway", sans-serif; */
+    font-weight: normal;
+    line-height: 1.5;
+    /* text-align: justify; */
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffdb13;
+    padding: 25px 25px; 
+}
+
+
+.nav_links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.nav_links > li{
+    padding: 10px 20px;
+}
+
+.nav_links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #123693;
+    text-transform: capitalize;
+}
+  
+.nav_links a:hover{
+    text-decoration: underline;
+}
+
+.nav_links .current-page {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bolder;
+    background-color: bisque;
+    border: 1px hidden;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+header > p{
+    padding: 50px 50px;
+    font-size: 1.5em;
+    background-color: #14234b;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora", serif;
+}
+
+img{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.alphago-logo {
+    width: 100%;
+    height: auto;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* padding: 20px; */
+}
+
+.section-link {
+    text-align: right;
+}
+
+.main-container > div{
+    padding: 0 50px;
+    background-color: white;
+    margin: 10px;
+}
+
+.main-container .shallow-green {
+    background-color: #d4ffed;
+}
+
+
+/* .main-container:nth-child(even){
+    background-color: #d4ffed;
+} */
+
+/* .wrap-element {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.wrapped-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.wrapped-iframe {
+    width: 100%;
+    height: 80vw;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.paper-link {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+
+.paper-link a {
+    text-decoration: none;
+    border: 1px solid #0053d6;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.paper-link a:hover {
+    background-color: #ffdb13;
+}
+
+.main-container .paper-item {
+    padding-bottom: 25px;
+}

@@ -10,12 +10,12 @@ h1 {
     background-image: url(../images/go_board.png);
     background-repeat:no-repeat;
     background-size: cover;
-    color: #ffdb13;
+    color: white;
     font-size: 48px;
     padding: 100px 0;
     text-align: center;
     font-family: sans-serif;
-    background-color: #14234b;
+    background-color: black;
 }
 
 h2 {
@@ -173,4 +173,22 @@ footer{
 
 .main-container .paper-item {
     padding-bottom: 25px;
+}
+
+.nine-image-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.nine-image-container > img {
+    align-self: stretch;
+    padding-bottom: 0;
+}
+
+.nine-image-container .match {
+    grid-column: 1 / -1;
 }

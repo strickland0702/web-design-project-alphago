@@ -9,13 +9,23 @@ body {
 h1 {
     background-image: url(../images/go_board.png);
     background-repeat:no-repeat;
-    background-size: cover;
-    color: white;
+    background-attachment: fixed; 
+    background-position: center;  
+    background-size: cover;       
     font-size: 48px;
-    padding: 100px 0;
+    padding: 177px 0;
     text-align: center;
     font-family: sans-serif;
     background-color: black;
+    animation-name: header_color_change;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header_color_change {
+    from {color: #0053d6;}
+    to {color: #14c8b9;}
 }
 
 h2 {
@@ -44,7 +54,7 @@ p {
 nav{
     display: flex;
     flex-direction: column;
-    background-color: #ffdb13;
+    background-color: #ffdc13cb;
     padding: 25px 25px; 
 }
 
@@ -115,9 +125,10 @@ img{
 }
 
 .section-container{
-    padding: 0 20px;
+    padding: 0 25px;
     background-color: white;
-    margin: 10px;
+    margin: 0;
+    /* border: 2px solid red; */
 }
 
 .shallow-green {
@@ -146,6 +157,7 @@ img{
 .wrapped-iframe {
     width: 100%;
     height: 80vw;
+    padding: 10px 0;
 }
 
 footer{
@@ -202,13 +214,107 @@ footer{
     -webkit-transition: top 0.5s ease-out;
     transition: top 0.5s ease-out;
     z-index: 1;
-  
+    text-decoration: none;
     position: absolute;
     top: -50px;
 }
 
 .skip a:focus{
     top: 10px;
+}
+
+.quote {
+    padding: 50px 50px;
+    /* background-color: #14c8b9; */
+    background-color: #14234b;
+
+}
+
+.quote-mark {
+    font-size: 5em;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora";
+}
+
+.quote-words{
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora";
+}
+
+.quote-author {
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.top {
+    position: fixed;
+    text-decoration: none;
+    right: -30px;
+    top: 100px;
+    transform: rotate(-90deg);
+}
+
+.top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #0053d6;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; 
+    padding: 20px;  
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-sizing: border-box; 
+    margin: 10px;
+    resize: vertical;
+    font-family: "Raleway";
+}
+
+
+textarea {
+    height: 10em;
+}
+  
+  /* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #123693;
+    width: 100px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #0053d6;
+    animation-name: long_submit;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes long_submit {
+    from {width: 100px;}
+    to {width: 100%;}
+}
+  
+  /* Add a background color and some padding around the form */
+.form-container {
+    border-radius: 10px;
+    background-color: #d4ffed;
+    padding: 20px;
+    margin: 0 10px 10px 10px;
 }
 
 @media screen and (min-width: 768px){
@@ -230,5 +336,20 @@ footer{
 
     nav {
         padding-bottom: 10px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    h1 {
+        animation: none;
+        color: white;
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+
+    input[type=submit]:hover {
+        animation: none;
     }
 }

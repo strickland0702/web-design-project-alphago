@@ -12,7 +12,9 @@
     </head>
     <body>
         <div class="skip"><a href="#main">Skip to Main Content</a></div>
-        <header>
+        <div class="top"><a href="#header">Back To Top</a></div>
+
+        <header id="header">
             <nav>
                 <img src="images/alphago_logo.png", alt="AlphaGo Logo" class="alphago-logo"/>
 
@@ -51,6 +53,17 @@
                     </div>
                 </div>
 
+                <div class="quote">
+                    <div class="quote-mark">“</div>
+                    <p class="quote-words">
+                        The Game of Go is the holy grail of artificial intelligence. Everything we've ever tried in AI, it just falls over when you try the game of Go.
+                    </p>
+                    <p class="quote-author">Dave Silver<br><br>
+
+                        Lead Researcher for AlphaGo
+                    </p>
+                </div>
+
                 <div class="section-container">
                     <h2>AlphaGo Approach</h2>
                     <div>
@@ -62,6 +75,15 @@
                     </div>
                 </div>
 
+                <div class="quote">
+                    <div class="quote-mark">“</div>
+                    <p class="quote-words">
+                        I thought AlphaGo was based on probability calculation and that it was merely a machine. But when I saw this move, I changed my mind. Surely, AlphaGo is creative.
+                    </p>
+                    <p class="quote-author">Lee Sedol<br><br>  
+                        Winner of 18 World Go Title
+                    </p>
+                </div>
                 <div class="shallow-green section-container">
                     <h2>Matches & Events</h2>
                     <div>
@@ -86,13 +108,39 @@
                     </div>
                 </div>
 
-
-                <!-- <div class="wrap-element">
+                <div class="section-container">
                     <h2>Documentary Film</h2>
+                    <div>
+                        <p>Directed by Greg Kohs with an original score by Academy Award nominee, Hauschka, AlphaGo chronicles a journey from the halls of Cambridge, through the backstreets of Bordeaux, past the coding terminals of DeepMind in London, and, ultimately, to the seven-day tournament in Seoul.</p>
+
+                    </div>
+                </div>
+
+                <div class="wrap-element">
                     <iframe src="https://www.youtube.com/embed/WXuK6gekU1Y" class="wrapped-iframe" title="AlphaGo Documentary">Documentary: AlphaGo</iframe>
-                </div> -->
+                </div>
 
             </div>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/xayayygk" method="POST">
+              
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your first name">
+              
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name">
+              
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your email">
+
+                  <label for="comments">Comments</label>
+                  <textarea id="comments" name="comments" placeholder="What do you think about this website..."></textarea>
+              
+                  <input type="submit" value="Submit">
+              
+                </form>
+              </div>
         </main>
 
         <footer>

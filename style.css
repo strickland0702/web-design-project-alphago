@@ -1,0 +1,490 @@
+body {
+    color: #123693;
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-image: url(../images/go_board.png);
+    background-repeat:no-repeat;
+    background-attachment: fixed; 
+    background-position: center;  
+    background-size: cover;       
+    font-size: 48px;
+    padding: 177px 0;
+    text-align: center;
+    font-family: sans-serif;
+    animation-name: header_color_change;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes header_color_change {
+    from {color: #0053d6;}
+    to {color: #14c8b9;}
+}
+
+h2 {
+    color: #0053d6;
+    font-size: 28px;
+    padding: 20px 0;
+    font-family: sans-serif;
+    line-height: normal;
+    text-align: start;
+}
+
+.abstract{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+p {
+    padding: 20px 0;
+    /* font-family: "Raleway", sans-serif; */
+    font-weight: normal;
+    line-height: 1.5;
+    /* text-align: justify; */
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffdc13cb;
+    padding: 25px 25px; 
+}
+
+
+.nav_links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.nav_links > li{
+    padding: 10px 20px;
+}
+
+.nav_links a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #123693;
+    text-transform: capitalize;
+}
+
+/* .nav_links > a:before {
+    background-image: url(../images/goboard_icon.png);
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 18px;
+    margin-right: 10px;
+    position: relative;
+    width: 18px;
+}
+   */
+.nav_links a:hover{
+    text-decoration: underline;
+}
+
+.nav_links .current-page {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bolder;
+    background-color: bisque;
+    border: 1px hidden;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+header > p{
+    padding: 50px 50px;
+    font-size: 1.5em;
+    background-color: #14234b;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora", serif;
+}
+
+img{
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.alphago-logo {
+    display: block;
+    width: 50%;
+    margin-left: auto;  
+    margin-right: auto;  
+    /* height: auto; */
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* padding: 20px; */
+}
+
+.section-link {
+    text-align: right;
+}
+
+.section-link > a {
+    text-decoration: none;
+    border: 1px solid #0053d6;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.section-link > a:hover {
+    color: white;
+    background-color: #0053d6;
+}
+
+.section-container{
+    padding: 0 25px;
+    background-color: white;
+    margin: 0;
+    /* border: 2px solid red; */
+}
+
+.shallow-green {
+    background-color: #d4ffed;
+}
+
+.wrap-element {
+    padding: 0;
+}
+
+.wrapped-iframe {
+    width: 100%;
+    height: 80vw;
+    padding: 20px 0;
+    max-width: 1200px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.main-container .paper-item {
+    padding-bottom: 25px;
+}
+
+.nine-image-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.nine-image-container > img {
+    align-self: stretch;
+    padding-bottom: 0;
+}
+
+.nine-image-container .match {
+    grid-column: 1 / -1;
+}
+
+.skip a{
+    background: #d4ffed;
+    left: 10px;
+    padding: 5px;
+    -webkit-transition: top 0.5s ease-out;
+    transition: top 0.5s ease-out;
+    z-index: 1;
+    text-decoration: none;
+    position: absolute;
+    top: -50px;
+}
+
+.skip a:focus{
+    top: 10px;
+}
+
+.quote {
+    padding: 50px 50px;
+    /* background-color: #14c8b9; */
+    background-color: #14234b;
+
+}
+
+.quote-mark {
+    font-size: 5em;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora";
+}
+
+.quote-words{
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-family: "Lora";
+}
+
+.quote-author {
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.top {
+    position: fixed;
+    text-decoration: none;
+    right: -30px;
+    top: 100px;
+    transform: rotate(-90deg);
+}
+
+.top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #0053d6;
+    border: 1px solid #0053d6;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.top a:hover {
+    color: white;
+    background-color: #0053d6;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%; 
+    padding: 20px;  
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    box-sizing: border-box; 
+    margin: 10px;
+    resize: vertical;
+    font-family: "Raleway";
+}
+
+
+textarea {
+    height: 10em;
+}
+  
+  /* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #123693;
+    width: 100px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #0053d6;
+    animation-name: long_submit;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-fill-mode: forwards;
+
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+    display: none;
+    padding: 50px;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #0053d6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 35%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: -5px;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+
+  .left::after {
+      right: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+  }
+
+@keyframes long_submit {
+    from {width: 100px;}
+    to {width: 100%;}
+}
+  
+  /* Add a background color and some padding around the form */
+.form-container {
+    border-radius: 10px;
+    background-color: #d4ffed;
+    padding: 20px;
+    max-width: 1024px;
+    margin: 20px auto;
+}
+
+@media screen and (min-width: 768px){
+    /* .main-container {
+        grid-template-columns: 1fr 1fr;
+    } */
+
+    .section-container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 25px;
+        padding: 20px 50px;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav {
+        padding-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .section-container {
+        grid-template-columns: 2fr 4fr 0.8fr;
+        column-gap: 100px;
+    }
+
+    .special-container {
+        column-gap: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .timeline {
+        display: block;
+    }
+
+    .alphago-logo {
+        width: 600px;
+    }
+
+    .wrap-element{
+        display: flex;
+        justify-content: center;
+    }
+    .wrapped-iframe {
+        height: 80vh;
+        padding-bottom: 50px;
+    }
+
+    .nav_links a {
+        font-size: 1.2em;
+    }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    h1 {
+        animation: none;
+        color: white;
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+
+    input[type=submit]:hover {
+        animation: none;
+    }
+}

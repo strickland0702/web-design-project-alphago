@@ -72,7 +72,7 @@ nav{
 .nav_links a {
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: bolder;
     color: #123693;
     text-transform: capitalize;
 }
@@ -108,7 +108,7 @@ header > p{
     background-color: #14234b;
     color: white;
     font-weight: bold;
-    font-family: "Lora", serif;
+    font-family: "Lora", sans-serif;
 }
 
 img{
@@ -119,9 +119,8 @@ img{
 .alphago-logo {
     display: block;
     width: 50%;
-    margin-left: auto;  
-    margin-right: auto;  
-    /* height: auto; */
+    margin: 0 auto;
+    height: auto;
 }
 
 .main-container {
@@ -224,14 +223,14 @@ footer{
     font-size: 5em;
     color: white;
     font-weight: bold;
-    font-family: "Lora";
+    font-family: "Lora", sans-serif;
 }
 
 .quote-words{
     font-size: 1.5em;
     color: white;
     font-weight: bold;
-    font-family: "Lora";
+    font-family: "Lora", sans-serif;
 }
 
 .quote-author {

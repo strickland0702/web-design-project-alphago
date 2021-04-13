@@ -118,7 +118,7 @@ img{
 
 .alphago-logo {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     height: auto;
 }
@@ -423,6 +423,10 @@ input[type=submit]:hover {
         grid-template-columns: 1fr 2fr;
         column-gap: 25px;
         padding: 20px 50px;
+    }
+
+    .alphago-logo {
+        width: 50%;
     }
 
     .nav_links {

@@ -1,7 +1,7 @@
 body {
     color: #123693;
     font-family: "Raleway", sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +16,7 @@ h1 {
     padding: 177px 0;
     text-align: center;
     font-family: sans-serif;
+    background-color: black;
     animation-name: header_color_change;
     animation-duration: 3s;
     animation-direction: alternate;
@@ -23,8 +24,8 @@ h1 {
 }
 
 @keyframes header_color_change {
-    from {color: #0053d6;}
-    to {color: #14c8b9;}
+    from {color: white;}
+    to {color: #0053d6;}
 }
 
 h2 {
@@ -94,12 +95,13 @@ nav{
 
 .nav_links .current-page {
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bolder;
     background-color: bisque;
     border: 1px hidden;
     border-radius: 20px;
     padding: 0 20px;
+    /* text-decoration: underline; */
 }
 
 header > p{
@@ -224,6 +226,7 @@ footer{
     color: white;
     font-weight: bold;
     font-family: "Lora", sans-serif;
+    text-align: center;
 }
 
 .quote-words{
@@ -231,6 +234,7 @@ footer{
     color: white;
     font-weight: bold;
     font-family: "Lora", sans-serif;
+    text-align: center;
 }
 
 .quote-author {
@@ -273,6 +277,7 @@ input[type=text], input[type=email], textarea {
     margin: 10px;
     resize: vertical;
     font-family: "Raleway";
+    font-size: 18px;
 }
 
 
@@ -299,6 +304,20 @@ input[type=submit]:hover {
     animation-iteration-count: initial;
     animation-fill-mode: forwards;
 
+}
+
+@keyframes long_submit {
+    from {width: 100px;}
+    to {width: 100%;}
+}
+  
+  /* Add a background color and some padding around the form */
+.form-container {
+    border-radius: 10px;
+    background-color: #d4ffed;
+    padding: 20px;
+    max-width: 1024px;
+    margin: 20px auto;
 }
 
 /* The actual timeline (the vertical ruler) */
@@ -399,19 +418,71 @@ input[type=submit]:hover {
     border-radius: 10px;
   }
 
-@keyframes long_submit {
-    from {width: 100px;}
-    to {width: 100%;}
-}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    min-height: 650px;
+    margin: 0 auto;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
   
-  /* Add a background color and some padding around the form */
-.form-container {
-    border-radius: 10px;
-    background-color: #d4ffed;
-    padding: 20px;
-    max-width: 1024px;
-    margin: 20px auto;
-}
+  
+  /* This container is needed to position the front and back side */
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  
+  /* Position the front and back side */
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  
+  /* Style the front side (fallback if image is missing) */
+  
+  .flip-card-front {
+    background-color: #14234b;
+    color: white;
+    color: black;
+  }
+  
+  
+  /* Style the back side */
+  
+  .flip-card-back {
+    background-color: #14234b;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
 
 @media screen and (min-width: 768px){
     /* .main-container {
@@ -437,6 +508,10 @@ input[type=submit]:hover {
     nav {
         padding-bottom: 10px;
     }
+
+    .flip-card {
+        min-height: 500px;
+      }
 
 }
 
@@ -481,6 +556,7 @@ input[type=submit]:hover {
     h1 {
         animation: none;
         color: white;
+        background-attachment: initial;
     }
 
     input[type=submit] {
@@ -490,4 +566,8 @@ input[type=submit]:hover {
     input[type=submit]:hover {
         animation: none;
     }
+
+    .flip-card-inner {
+        transition: none;
+      }
 }

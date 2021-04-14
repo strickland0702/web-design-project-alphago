@@ -424,7 +424,7 @@ input[type=submit]:hover {
     background-color: transparent;
     cursor: pointer;
     width: 100%;
-    min-height: 750px;
+    min-height: 700px;
     margin: 0 auto;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }

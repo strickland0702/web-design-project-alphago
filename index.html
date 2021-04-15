@@ -153,12 +153,6 @@
                             </div>
                             <div class="container left">
                                 <div class="content">
-                                  <h2>January 2017</h2>
-                                  <p>AlphaGo achieved 60 straight wins against online top players.</p>
-                                </div>
-                            </div>
-                            <div class="container right">
-                                <div class="content">
                                   <h2>May 2017</h2>
                                   <p>AlphaGo defeated world's first Go player Ke Jie with 3-0.</p>
                                 </div>
@@ -169,21 +163,16 @@
                     <div>
                         <p>In October 2015, AlphaGo played its first match against the reigning three-time European Champion, Mr Fan Hui. AlphaGo won the first ever game against a Go professional with a score of 5-0.</p>
                         <p>AlphaGo then competed against legendary Go player Mr Lee Sedol, the winner of 18 world titles, who is widely considered the greatest player of the past decade. AlphaGo won a 4-1 victory in Seoul, South Korea, on March 2016. </p>
-                        <div class="nine-image-container">
-                            <img src="images/lee_match.png" alt="leesedol match" class="match">
-                            <img src="images/leesedol.png" alt="leesedol 1">
-                            <!-- <img src="images/leesedol3.png" alt="leesedol 2" class="middle-img"> -->
-                            <img src="images/leesedol2.jpg" alt="leesedol 3">
+                        <div>
+                            <img src="images/lee_match.png" alt="leesedol match" class="mySlides">
+                            <img src="images/leesedol.png" alt="leesedol 1" class="mySlides">
+                            <img src="images/leesedol2.jpg" alt="leesedol 3" class="mySlides">
+                            <img src="images/kejie_match.png" alt="kejie match" class="mySlides">
+                            <img src="images/kejie.jpg" alt="kejie 1" class="mySlides">
+                            <img src="images/kejie2.jpg" alt="kejie 3" class="mySlides">
                         </div>
                         <p>In January 2017, Deepmind revealed an improved, online version of AlphaGo called Master. This online player achieved 60 straight wins in time-control games against top international players. </p>
-                        <p>Four months later, AlphaGo took part in the Future of Go Summit in China and defeated Ke Jie, the world's first Go player at that time, 3-0. </p>
-                        <div class="nine-image-container">
-                            <img src="images/kejie_match.png" alt="kejie match" class="match">
-                            <img src="images/kejie.jpg" alt="kejie 1">
-                            <!-- <img src="images/kejie3.png" alt="kejie 2" class="middle-img"> -->
-                            <img src="images/kejie2.jpg" alt="kejie 3">
-                        </div>
-        
+                        <p>Four months later, AlphaGo took part in the Future of Go Summit in China and defeated Ke Jie, the world's first Go player at that time, 3-0. </p> 
                         <p class = 'section-link'><a href="events.html">More landmark events</a></p>
                     </div>
                 </div>
@@ -204,25 +193,6 @@
                 <iframe src="https://www.youtube.com/embed/WXuK6gekU1Y" class="wrapped-iframe" title="AlphaGo Documentary">Documentary: AlphaGo</iframe>
             </div>
 
-            <!-- <div class="form-container">
-                <form action="https://formspree.io/f/xayayygk" method="POST">
-              
-                  <label for="fname">First Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Your first name">
-              
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name">
-              
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="Your email">
-
-                  <label for="comments">Comments</label>
-                  <textarea id="comments" name="comments" placeholder="What do you think about this website..."></textarea>
-              
-                  <input type="submit" value="Submit">
-              
-                </form>
-            </div> -->
         </main>
 
         <footer>
@@ -230,5 +200,21 @@
                 &copy; Rui Ding - Web Design Project Winter 2021</p>
         </footer>
 
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 3000); // Change image every 3 seconds
+            }
+        </script>
     </body>
 </html>

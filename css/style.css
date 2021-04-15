@@ -32,7 +32,8 @@ h2 {
     color: #0053d6;
     font-size: 28px;
     padding: 20px 0;
-    font-family: sans-serif;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
     line-height: normal;
     text-align: start;
 }
@@ -97,11 +98,11 @@ nav{
     text-transform: uppercase;
     font-size: 36px;
     font-weight: bolder;
-    background-color: bisque;
+    /* background-color: bisque; */
     border: 1px hidden;
     border-radius: 20px;
     padding: 0 20px;
-    /* text-decoration: underline; */
+    text-decoration: underline;
 }
 
 header > p{
@@ -117,6 +118,10 @@ img{
     width: 100%;
     padding-bottom: 20px;
 }
+
+/* .middle-img {
+    display: none;
+} */
 
 .alphago-logo {
     display: block;
@@ -190,7 +195,7 @@ footer{
 }
 
 .nine-image-container > img {
-    align-self: stretch;
+    align-self: flex-start;
     padding-bottom: 0;
 }
 
@@ -549,6 +554,10 @@ input[type=submit]:hover {
     .nav_links a {
         font-size: 1.2em;
     }
+
+    /* .middle-img {
+        display: block;
+    } */
 
 }
 

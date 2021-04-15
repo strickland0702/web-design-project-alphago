@@ -185,24 +185,6 @@ footer{
     padding-bottom: 25px;
 }
 
-.nine-image-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
-    justify-content: center;
-    align-content: center;
-}
-
-.nine-image-container > img {
-    align-self: flex-start;
-    padding-bottom: 0;
-}
-
-.nine-image-container .match {
-    grid-column: 1 / -1;
-}
-
 .skip a{
     background: #d4ffed;
     left: 10px;
@@ -328,7 +310,7 @@ input[type=submit]:hover {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    width: 500px;
+    width: 550px;
     margin: 0 auto;
     display: none;
     padding: 50px;
@@ -412,7 +394,7 @@ input[type=submit]:hover {
   }
 
   .left::after {
-      right: -16px;
+      right: -24px;
   }
   
   /* The actual content */
@@ -437,56 +419,67 @@ input[type=submit]:hover {
   
   /* This container is needed to position the front and back side */
   
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+}
   
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
   
-  .flip-card:hover .flip-card-inner,
-  .flip-card:focus-within .flip-card-inner,
-  .flip-card:active .flip-card-inner,
-  .flip-card:focus .flip-card-inner {
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
     transform: rotateY(180deg);
-  }
+}
   
   
   /* Position the front and back side */
   
-  .flip-card-front,
-  .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
-  }
+}
   
   
   /* Style the front side (fallback if image is missing) */
   
-  .flip-card-front {
+.flip-card-front {
     background-color: #14234b;
     color: white;
     color: black;
-  }
+}
   
   
   /* Style the back side */
   
-  .flip-card-back {
+.flip-card-back {
     background-color: #14234b;
     color: white;
     transform: rotateY(180deg);
-  }
+}
 
+.mySlides {
+    display: none;
+    animation-name: show_up;
+    animation-duration: 1s;
+    animation-iteration-count: inherit;
+}
+
+@keyframes show_up {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 
 @media screen and (min-width: 768px){
@@ -579,4 +572,8 @@ input[type=submit]:hover {
     .flip-card-inner {
         transition: none;
       }
+
+    .mySlides {
+        animation: none;
+    }
 }
